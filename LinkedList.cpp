@@ -112,7 +112,6 @@ int main()
     // print the list
     cout<<"Linked list 1 by assigning: "; 
     printList(head1);
-    cout<<"\n"; 
     
     
     /* Example 2 : Create a linked list by inserting */
@@ -133,7 +132,7 @@ int main()
     insertAfter(head2->next, 2);  
     
     // print the list
-    cout<<"Linked list 2 by inserting: ";  
+    cout<<"\nLinked list 2 by inserting: ";  
     printList(head2);  
        
     
