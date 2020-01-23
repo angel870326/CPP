@@ -53,7 +53,7 @@ int Stack::pop()
 } 
 
 
-/* peek (return top item) */ 
+/* peek (return top item, last popped item in the stack) */ 
 
 int Stack::peek() 
 { 
