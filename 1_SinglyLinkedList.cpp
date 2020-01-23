@@ -117,7 +117,6 @@ void deleteNodeByKey(Node **head_ref, int key)
 
 
 
-
 int main() 
 { 
     /* Example 1 : Create a linked list by assigning */
@@ -183,8 +182,7 @@ int main()
     cout<<"\nLinked List 1 after deleting position 1: "; 
     printList(head1); 
     
-    
-    
+       
     return 0;
     
 }
