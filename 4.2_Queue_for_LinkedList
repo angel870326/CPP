@@ -97,3 +97,14 @@ int main()
     return 0; 
 } 
 
+
+
+
+/*
+
+Output:
+
+Dequeued item is 30
+
+*/
+
