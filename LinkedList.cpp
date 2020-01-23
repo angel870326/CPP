@@ -86,7 +86,7 @@ void append(Node** head_ref, int new_element)
 } 
 
 /* Delete the first occurrence of a given key in the linked list */
-void deleteNode(Node **head_ref, int key) 
+void deleteNodeByKey(Node **head_ref, int key) 
 { 
     // Store head node 
     Node* temp = *head_ref, *prev; 
@@ -168,14 +168,20 @@ int main()
     printList(head2);  
      
     
-    /* Example 3 : A linked list with deletion */
+    /* Example 3 : Delete a node in linked list 2 by key */
     
     // delete 0 in linked list 2 (Linked list: 3 -> 2 -> 6 -> NULL)  
-    deleteNode(&head2, 0); 
-
-    // print the list
-    cout<<"\nLinked list 3 with deletion: ";  
+    deleteNodeByKey(&head2, 0); 
+    cout<<"\nLinked list 2 after deleting 0: ";  
     printList(head2);  
+    
+    
+    /* Example 4 : Delete a node in linked list 1 by position */
+    
+    // delete position 1 in linked list 1 (Linked list: 1 -> 3 -> NULL)  
+    deleteNodeByPos(&head1, 1); 
+    cout<<"\nLinked List 1 after deleting position 1: "; 
+    printList(head1); 
     
     
     
