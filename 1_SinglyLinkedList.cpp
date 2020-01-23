@@ -115,6 +115,41 @@ void deleteNodeByKey(Node **head_ref, int key)
     free(temp);  // Free memory 
 } 
 
+/* Delete the node at a given position */
+void deleteNodeByPos(Node **head_ref, int position) 
+{ 
+   // If linked list is empty 
+   if (*head_ref == NULL) 
+      return; 
+  
+   // Store head node 
+   Node* temp = *head_ref; 
+  
+    // If head needs to be removed 
+    if (position == 0) 
+    { 
+        *head_ref = temp->next;   // Change head 
+        free(temp);               // free old head 
+        return; 
+    } 
+  
+    // Find previous node of the node to be deleted 
+    for (int i=0; temp!=NULL && i < position-1; i++) 
+         temp = temp->next; 
+  
+    // If position is more than the number of nodes 
+    if (temp == NULL || temp->next == NULL) 
+         return; 
+  
+    // Node temp->next is the node to be deleted, store pointer to the next of node to be deleted 
+    Node *next = temp->next->next; 
+  
+    // Unlink the node from linked list 
+    free(temp->next);  // Free memory 
+  
+    temp->next = next;  // Unlink the deleted node from list 
+} 
+  
 
 
 int main() 
@@ -122,17 +157,17 @@ int main()
     /* Example 1 : Create a linked list by assigning */
     
     // empty list
-    Node* head = NULL; 
+    Node* head1 = NULL; 
     Node* second = NULL; 
     Node* third = NULL; 
   
     // allocate 3 nodes in the heap 
-    head = new Node(); 
+    head1 = new Node(); 
     second = new Node(); 
     third = new Node(); 
     
-    head->element = 1; // assign element in first node 
-    head->next = second; // Link first node with the second node
+    head1->element = 1; // assign element in first node 
+    head1->next = second; // Link first node with the second node
     
     second->element = 2; // assign element to second node 
     second->next = third; // Link second node with the third node
