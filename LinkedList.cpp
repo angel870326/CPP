@@ -85,6 +85,38 @@ void append(Node** head_ref, int new_element)
     return;     
 } 
 
+/* Delete the first occurrence of a given key in the linked list */
+void deleteNode(Node **head_ref, int key) 
+{ 
+    // Store head node 
+    Node* temp = *head_ref, *prev; 
+  
+    // If head node itself holds the key to be deleted 
+    if (temp != NULL && temp->element == key) 
+    { 
+        *head_ref = temp->next;   // Changed head 
+        free(temp);               // free old head 
+        return; 
+    } 
+  
+    // Search for the key to be deleted, keep track of the previous node as we need to change "prev->next"
+    while (temp != NULL && temp->element != key) 
+    { 
+        prev = temp; 
+        temp = temp->next; 
+    } 
+  
+    // If key was not present in linked list 
+    if (temp == NULL) return; 
+  
+    // Unlink the node from linked list 
+    prev->next = temp->next; 
+  
+    free(temp);  // Free memory 
+} 
+
+
+
 
 int main() 
 { 
@@ -134,7 +166,18 @@ int main()
     // print the list
     cout<<"\nLinked list 2 by inserting: ";  
     printList(head2);  
-       
+     
+    
+    /* Example 3 : A linked list with deletion */
+    
+    // delete 0 in linked list 2 (Linked list: 3 -> 2 -> 6 -> NULL)  
+    deleteNode(&head2, 0); 
+
+    // print the list
+    cout<<"\nLinked list 3 with deletion: ";  
+    printList(head2);  
+    
+    
     
     return 0;
     
