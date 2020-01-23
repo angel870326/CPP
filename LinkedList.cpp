@@ -17,7 +17,7 @@ void printList(Node* n)
     } 
 } 
 
-/* Insert a new node at the front of the list */
+/* Insert a new node at the front of the list O(1) */
 void addFront(Node** head_ref, int new_element)  
 {  
     // 1. allocate a new node
@@ -26,20 +26,20 @@ void addFront(Node** head_ref, int new_element)
     // 2. put an element in the new node
     new_node->element = new_element;  
   
-    // 3. make the new node as head
+    // 3. make "next" of the new node as head
     new_node->next = (*head_ref);  
   
     // 4. move the head to point to the new node
     (*head_ref) = new_node;  
-}
+}  
 
-/* Insert a new node after the given prev_node */
+/* Insert a new node after the given prev_node O(1) */
 void insertAfter(Node* prev_node, int new_element) 
 { 
     // 1. check if the given prev_node is NULL
     if (prev_node == NULL)  
     {  
-       printf("the given previous node cannot be NULL");        
+       cout<<"The given previous node cannot be NULL.";        
        return;   
     }   
            
@@ -56,11 +56,41 @@ void insertAfter(Node* prev_node, int new_element)
     prev_node->next = new_node; 
 } 
 
+/* Append a new node at the end O(n) */
+void append(Node** head_ref, int new_element) 
+{ 
+    // 1. allocate a new node and a last node
+    Node* new_node = new Node(); 
+    Node *last = *head_ref;  // used in step 5
 
+    // 2. put an element in the new node
+    new_node->element = new_element;  
+  
+    // 3. this new node is going to be the last node, so make next of it as NULL
+    new_node->next = NULL; 
+  
+    // 4. if the Linked List is empty, then make the new node as head
+    if (*head_ref == NULL) 
+    { 
+       *head_ref = new_node; 
+       return; 
+    }   
+       
+    // 5. else traverse till the last node
+    while (last->next != NULL) 
+        last = last->next; 
+   
+    // 6. Change the next of last node
+    last->next = new_node; 
+    return;     
+} 
 
 
 int main() 
 { 
+    /* Example 1 */
+    
+    // empty list
     Node* head = NULL; 
     Node* second = NULL; 
     Node* third = NULL; 
@@ -79,7 +109,33 @@ int main()
     third->element = 3; // assign element to third node 
     third->next = NULL; 
     
-    printList(head);
+    // print the list
+    cout<<"Linked list 1: "; 
+    printList(head1);
+    cout<<"\n"; 
+    
+    
+    /* Example 2 */
+    
+    // empty list
+    Node* head2 = NULL; 
+    
+    // insert 3  (Linked list: 3 -> NULL)  
+    append(&head2, 3);  
+      
+    // insert 0 at the beginning  (Linked list: 0 -> 3 -> NULL) 
+    addFront(&head2, 0);  
+      
+    // insert 6 at the end  (Linked list: 0 -> 3 -> 6 -> NULL)  
+    append(&head2, 6);  
+      
+    // insert 2, after 3  (Linked list: 0 -> 3 -> 2 -> 6 -> NULL)  
+    insertAfter(head2->next, 2);  
+    
+    // print the list
+    cout<<"Linked list 2: ";  
+    printList(head2);  
+       
     
     return 0;
     
