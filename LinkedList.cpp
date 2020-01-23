@@ -31,7 +31,33 @@ void addFront(Node** head_ref, int new_element)
   
     // 4. move the head to point to the new node
     (*head_ref) = new_node;  
-}  
+}
+
+/* Insert a new node after the given prev_node */
+void insertAfter(Node* prev_node, int new_element) 
+{ 
+    // 1. check if the given prev_node is NULL
+    if (prev_node == NULL)  
+    {  
+       printf("the given previous node cannot be NULL");        
+       return;   
+    }   
+           
+    // 2. allocate a new node
+    Node* new_node = new Node();  
+   
+    // 3. put an element in the new node
+    new_node->element = new_element;  
+   
+    // 4. make "next" of the new node as next of the prev_node
+    new_node->next = prev_node->next;  
+   
+    // 5. move the next of prev_node as new_node
+    prev_node->next = new_node; 
+} 
+
+
+
 
 int main() 
 { 
