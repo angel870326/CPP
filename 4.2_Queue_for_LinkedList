@@ -71,7 +71,6 @@ QNode* dequeue(Queue* q)
   
     // Store previous front and move front one node ahead 
     QNode* temp = q->front; 
-    delete(temp); 
     q->front = q->front->next; 
   
     // If front becomes NULL, then change rear also as NULL 
