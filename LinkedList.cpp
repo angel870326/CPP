@@ -88,7 +88,7 @@ void append(Node** head_ref, int new_element)
 
 int main() 
 { 
-    /* Example 1 */
+    /* Example 1 : Create a linked list by assigning */
     
     // empty list
     Node* head = NULL; 
@@ -110,12 +110,12 @@ int main()
     third->next = NULL; 
     
     // print the list
-    cout<<"Linked list 1: "; 
+    cout<<"Linked list 1 by assigning: "; 
     printList(head1);
     cout<<"\n"; 
     
     
-    /* Example 2 */
+    /* Example 2 : Create a linked list by inserting */
     
     // empty list
     Node* head2 = NULL; 
@@ -133,7 +133,7 @@ int main()
     insertAfter(head2->next, 2);  
     
     // print the list
-    cout<<"Linked list 2: ";  
+    cout<<"Linked list 2 by inserting: ";  
     printList(head2);  
        
     
