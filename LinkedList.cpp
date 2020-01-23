@@ -17,6 +17,22 @@ void printList(Node* n)
     } 
 } 
 
+/* Insert a new node at the front of the list */
+void addFront(Node** head_ref, int new_element)  
+{  
+    // 1. allocate a new node
+    Node* new_node = new Node();  
+  
+    // 2. put an element in the new node
+    new_node->element = new_element;  
+  
+    // 3. make the new node as head
+    new_node->next = (*head_ref);  
+  
+    // 4. move the head to point to the new node
+    (*head_ref) = new_node;  
+}  
+
 int main() 
 { 
     Node* head = NULL; 
