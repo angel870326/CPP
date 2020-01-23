@@ -221,3 +221,19 @@ int main()
     return 0;
     
 }
+
+
+/*
+
+Output:
+
+Linked list 1 by assigning: 1 2 3                                                                                                      
+Linked list 2 by inserting: 0 3 2 6                                                                                                    
+Linked list 2 after deleting 0: 3 2 6                                                                                                  
+Linked List 1 after deleting position 1: 1 3   
+
+*/
+
+
+
+
