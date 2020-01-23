@@ -1,14 +1,14 @@
 #include <iostream>
-
 using namespace std;
 
+/* Linked list node */
 class Node { 
 public: 
     int element; 
     Node* next; 
 }; 
 
-// Print contents of linked list starting from the given node 
+/* Print contents of linked list starting from the given node */
 void printList(Node* n) 
 { 
     while (n != NULL) { 
