@@ -23,7 +23,7 @@ void inorder(struct node *root)
     if (root != NULL) 
     { 
         inorder(root->left); 
-        printf("%d \n", root->key); 
+        printf("%d ", root->key); 
         inorder(root->right); 
     } 
 } 
