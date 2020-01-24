@@ -1,6 +1,8 @@
 /*  Search, Insert, and Delete in Binary Search Tree (BST) */
 #include<stdio.h> 
 #include<stdlib.h> 
+#include <bits/stdc++.h>  
+using namespace std; 
 
 struct node 
 { 
@@ -117,6 +119,21 @@ struct node* deleteNode(struct node* root, int key)
 }
 
 
+/* Given a non-empty binary search tree, return the minimum value found in that tree. 
+   Note that the entire tree does not need to be searched. */
+int minValue(struct node* node)  
+{  
+    struct node* current = node;  
+  
+    /* loop down to find the leftmost leaf */
+    while (current->left != NULL)  
+    {  
+        current = current->left;  
+    }  
+    return(current->key);  
+}  
+
+
   
 int main() 
 { 
@@ -157,6 +174,12 @@ int main()
     
     // Search for a given key in BST
     printf("\n\nSearch for 70: %d\n", search(root, 70)->key);
+    
+    
+    // Find the minimum value in BST
+    cout << "\nMinimum value in BST is " << minValueNode(root)->key;  
+    cout << "\nMinimum value in BST is " << minValue(root); 
+    
    
     return 0; 
 } 
@@ -179,6 +202,9 @@ BST after deleting 50 (node with two children)
 40 60 70 80                                                                                                                            
                                                                                                                                        
 Search for 70: 70  
+
+Minimum value in BST is 40                                                                                                             
+Minimum value in BST is 40  
 
 */
 
