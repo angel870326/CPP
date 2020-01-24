@@ -1,8 +1,7 @@
 # CPP
 C++ Self-study 2020
 
-
-
+\n
 Tree Traversals (Inorder, Preorder, Postorder)
 
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
