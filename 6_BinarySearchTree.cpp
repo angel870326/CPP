@@ -61,7 +61,6 @@ struct node* search(struct node* root, int key)
 } 
 
 
-
    
 int main() 
 { 
@@ -81,8 +80,7 @@ int main()
     insert(root, 80); 
     
     insert(root, 25); 
-
-   
+  
     // print inoder traversal of the BST 
     inorder(root); 
     
@@ -107,3 +105,6 @@ Output:
 Search for 50: 50                                                                                                                      
 
 */
+
+
+
