@@ -23,10 +23,6 @@ Online C++ compiler:
 
 Reference: 
 
->Data Structure
+>Data Structure <br/>https://www.geeksforgeeks.org/data-structures/ 
 
->https://www.geeksforgeeks.org/data-structures/ 
-
->Algorithms
-
->https://www.geeksforgeeks.org/fundamentals-of-algorithms/
+>Algorithms <br/>https://www.geeksforgeeks.org/fundamentals-of-algorithms/
