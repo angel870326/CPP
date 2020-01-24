@@ -1,4 +1,4 @@
-/* Insert and Search in Binary Search Tree (BST) */
+/*  Search, Insert, and Delete in Binary Search Tree (BST) */
 #include<stdio.h> 
 #include<stdlib.h> 
 
@@ -27,6 +27,21 @@ void inorder(struct node *root)
         inorder(root->right); 
     } 
 } 
+
+/* Search a given key in a given Binary Search Tree (BST) */
+struct node* search(struct node* root, int key) 
+{ 
+    // If root is null or key is present at root, return NULL
+    if (root == NULL || root->key == key) 
+       return root; 
+     
+    // If key is greater than root's key 
+    if (root->key < key) 
+       return search(root->right, key); 
+  
+    // If key is smaller than root's key 
+    return search(root->left, key); 
+} 
    
 /* Insert a new node with given key in BST */
 struct node* insert(struct node* node, int key) 
@@ -45,20 +60,6 @@ struct node* insert(struct node* node, int key)
 } 
 
 
-/* Search a given key in a given Binary Search Tree (BST) */
-struct node* search(struct node* root, int key) 
-{ 
-    // If root is null or key is present at root, return NULL
-    if (root == NULL || root->key == key) 
-       return root; 
-     
-    // If key is greater than root's key 
-    if (root->key < key) 
-       return search(root->right, key); 
-  
-    // If key is smaller than root's key 
-    return search(root->left, key); 
-} 
 
 
    
