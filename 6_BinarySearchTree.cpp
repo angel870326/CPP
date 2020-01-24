@@ -1,4 +1,4 @@
-/*  Search, Insert, and Delete in Binary Search Tree (BST) */
+/*  Search, Insert, Delete, and Minimum Value in Binary Search Tree (BST) */
 #include<stdio.h> 
 #include<stdlib.h> 
 #include <bits/stdc++.h>  
