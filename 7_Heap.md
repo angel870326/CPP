@@ -5,17 +5,17 @@ Max Heap: max value at the root<br/>
 <br/>
 
 Insert (Min heap)
->(1) add at the end of the tree (new index)
-<br/>(2) if key < parent's key &nbsp;    ->   &nbsp;  swap
+>(1) &nbsp; add at the end of the tree (new index)
+<br/>(2) &nbsp; if key < parent's key &nbsp;&nbsp; -> &nbsp; swap
 <br/>Time complexity : O(logn)<br/>
 <br/>
 
 Remove (Min heap)
->1. remove key at root<br/>
-2. move the last node to root<br/>
-3. 小的小孩比我小  ->  swap<br/>
+>(1) &nbsp; remove key at root
+<br/>(2) &nbsp; move the last node to root
+<br/>(3) &nbsp; 小的小孩比我小 &nbsp;&nbsp; -> &nbsp; swap<br/>
 <br/>
 Heap Sort
->in-place algorithm<br/>
-not stable but can be stable<br/>
-Time complexity: O(nlogn)<br/>
+>in-place algorithm
+<br/>not stable but can be stable
+<br/>Time complexity: O(nlogn)<br/>
