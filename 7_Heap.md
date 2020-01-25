@@ -5,7 +5,7 @@ Max Heap: max value at the root<br/>
 <br/>
 
 Insert (Min heap)
->1 add at the end of the tree (new index)
+>1. add at the end of the tree (new index)
 <br/>2. if key < parent's key     ->     swap
 <br/>Time complexity : O(logn)<br/>
 <br/>
