@@ -15,7 +15,6 @@ Remove (Min heap)
 <br/>(2) &nbsp; move the last node to root
 <br/>(3) &nbsp; 小的小孩比我小 &nbsp;&nbsp; -> &nbsp; swap<br/>
 <br/>
+
 Heap Sort
->in-place algorithm
-<br/>not stable but can be stable
-<br/>Time complexity: O(nlogn)<br/>
+>in-place algorithm<br/>not stable but can be stable<br/>Time complexity: O(nlogn)<br/>
