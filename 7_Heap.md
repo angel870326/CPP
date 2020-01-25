@@ -1,7 +1,7 @@
 Binary Heap
 >Min Heap: min value at the root<br/>
 Max Heap: max value at the root<br/>
-<br/>Root's index is 0 in an array.<br/>
+<br/>Root's index is 1 in an array. Arr[0] remains blank.<br/>
 <br/>
 
 Insert (Min heap)
